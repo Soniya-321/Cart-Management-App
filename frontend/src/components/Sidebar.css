@@ -1,0 +1,96 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 56px; /* height of navbar */
+    background-color: #243e69;
+    z-index: 1050;
+    overflow-y: auto;
+    scrollbar-width: none;
+    transition: all 0.3s ease-in-out;
+    margin-top: 14px;
+  }
+
+  .nav-link {
+    color: white;
+  }
+  .sidebar .nav-link:hover {
+    background-color: rgba(218, 213, 213, 0.932);
+    text-decoration: none;
+    border-radius: 4px;
+    color: black;
+    font-weight: 600;
+  }
+  
+  .sidebar .nav-link.active {
+    background-color: #fff;
+    color: #1e1f2f;
+    font-weight: 600;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .sidebar .nav-link.active svg {
+    color: #1e1f2f;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  
+  @media (max-width: 767.98px) {
+    .sidebar {
+      left: -260px;
+    }
+    .sidebar.open {
+      left: 0;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar {
+      left: 0;
+    }
+  }
+  
+
+  .card {
+    width: 300px;
+    max-height: 400px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.09);
+    border: none;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-img-top {
+    height: 230px;
+    width: 300px;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+    transition: opacity 0.3s ease;
+    
+    } 
+     .card:hover .card-img-top {
+      opacity: 0.7;
+      background-color: black;
+    }  
+    /* .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3); /* semi-transparent black 
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+     */
+    /* .card:hover .overlay {
+      opacity: 1;
+    }
+   */
+   .card-img-top:hover .overlay {
+    opacity: 1;
+    background-color: black;
+  }
